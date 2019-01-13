@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Map, Marker, Tooltip, TileLayer } from "react-leaflet";
 import styled from "styled-components";
-const sidebarWidth = "315px";
+const sidebarWidth = "300px";
 
 class MapView extends Component {
   state = {

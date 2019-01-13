@@ -33,14 +33,14 @@ class Chart extends Component {
   };
   getDimensions = () => {
     this.setState({
-      chartWidth: window.innerWidth - 315,
+      chartWidth: window.innerWidth - 300,
       chartHeight: window.innerHeight / 2
     });
   };
   render() {
     const chartStyle = {
       top: "0",
-      left: "315",
+      left: "300",
       position: "fixed"
     };
     return (
@@ -54,7 +54,7 @@ class Chart extends Component {
       >
         <button
           type="button"
-          className="btn btn-secondary m-2"
+          className="btn btn-secondary m-3"
           id="chart-button"
           onClick={this.props.resetSelectedLocation}
         >
