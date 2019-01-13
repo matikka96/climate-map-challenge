@@ -15,13 +15,10 @@ function Sidebar({
     height: "100vh",
     position: "relative",
     cursor: "pointer",
-    zIndex: "10"
+    zIndex: "10",
+    opacity: "0"
   };
-  return (
-    <div
-      className="list-group-flush zindex-fixed border-right"
-      style={sidebarStyle}
-    >
+  return <div className="list-group-flush zindex-fixed border-right" style={observationLocations.length == 0 ? { opacity: "0" } : { opacity: "1" }} id="sidebar">
       <div className="list-group-item list-group-item-action active sticky-top">
         <b>Valitse asema:</b>
       </div>
@@ -38,8 +35,7 @@ function Sidebar({
           {l.info.name}
         </div>
       ))}
-    </div>
-  );
+    </div>;
 }
 
 export default Sidebar;

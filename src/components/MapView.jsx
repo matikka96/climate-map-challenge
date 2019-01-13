@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Map, Marker, Tooltip, TileLayer } from "react-leaflet";
 import styled from "styled-components";
+const sidebarWidth = "315px";
 
 class MapView extends Component {
   state = {
@@ -23,10 +24,10 @@ class MapView extends Component {
   };
   render() {
     const MapContainer = styled(Map)`
-      width: calc(100% - 300px);
-      position: absolute;
+      width: calc(100% - ${sidebarWidth});
+      position: fixed;
       bottom: 0px;
-      left: 315px;
+      left: ${sidebarWidth};
     `;
     const activeMarkerStyle = {
       backgroundColor: "red"

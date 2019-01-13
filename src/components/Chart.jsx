@@ -67,7 +67,7 @@ class Chart extends Component {
           style={chartStyle}
         >
           <VerticalGridLines />
-          <XAxis title="Time" />
+          <XAxis title="Datetime" />
           <YAxis title="Temperature °C " />
           <LineSeries data={this.state.chartData} color="blue" />
         </XYPlot>
