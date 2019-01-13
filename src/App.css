@@ -1,0 +1,5 @@
+#chart-button {
+    z-index: 2000;
+    position: relative;
+    float: right;
+}
