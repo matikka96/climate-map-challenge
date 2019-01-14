@@ -18,16 +18,13 @@ Original project was made of main App.js component and one child component named
 
 **Component structure:**
 
-![screenshot](https://github.com/matikka96/climate-map-challenge/blob/master/screenshot.png?raw=true)
-
 ```
 App.js  
   |--Sidebar.jsx    [PINK]
   |--MapView.jsx    [RED]
   |--Chart.jsx      [YELLOW]
 ```
-
-All the child components are shown in the "Result" sections screenshot surrounded with individual colors.
+![screenshot](https://github.com/matikka96/climate-map-challenge/blob/master/screenshot.png?raw=true)
 
 ### Data handling
 As mentioned above, App.js component is passing all the information between components. For example if the station is selected from the Sidebar, corresponding stations will be activated in MaView and vice versa. 
