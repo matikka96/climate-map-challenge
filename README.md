@@ -22,6 +22,12 @@ Original project was made of main App.js component and one child component named
 * MapView component. Weather stations are also illustrated visually on the map.
 * Chart component for displaying temperature from selected station. 
 
+*Component structure:*
+App.js
+ |--Sidebar.jsx
+ |--MapView.jsx
+ |--Chart.jsx 
+
 All the child components are shown in the "Result" sections screenshot surrounded with individual colors.
 
 ### Data handling
@@ -33,7 +39,7 @@ When station is selected, Chart component will pop up and weather information wi
 
 Execute following commands:
 
-#### `npm install`
-#### `npm start`
+`npm install`
+`npm start`
 
 App is now seen from here: http://localhost:3000
