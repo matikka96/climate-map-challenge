@@ -25,8 +25,11 @@ Original project was made of main App.js component and one child component named
 **Component structure:**
 
 > App.js
+
 > |--Sidebar.jsx
+
 > |--MapView.jsx
+
 > |--Chart.jsx 
 
 All the child components are shown in the "Result" sections screenshot surrounded with individual colors.
