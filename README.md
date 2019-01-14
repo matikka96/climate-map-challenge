@@ -23,13 +23,10 @@ Original project was made of main App.js component and one child component named
 * Chart component for displaying temperature from selected station. 
 
 *Component structure:*
-App.js
-
- |--Sidebar.jsx
-
- |--MapView.jsx
- 
- |--Chart.jsx 
+          App.js
+          |--Sidebar.jsx
+          |--MapView.jsx
+          |--Chart.jsx 
 
 All the child components are shown in the "Result" sections screenshot surrounded with individual colors.
 
@@ -43,6 +40,7 @@ When station is selected, Chart component will pop up and weather information wi
 Execute following commands:
 
 `npm install`
+
 `npm start`
 
 App is now seen from here: http://localhost:3000
