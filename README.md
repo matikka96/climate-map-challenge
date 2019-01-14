@@ -8,8 +8,9 @@ Author: Matvei Tikka
 
 ##  Result
 
-This is how the end result looks like
-!screenshot()
+This is how the end result looks like:
+![screenshot](https://github.com/matikka96/climate-map-challenge/blob/master/screenshot.png?raw=true)
+Colors represent different components. Read more down below.
 
 ## What has been done?
 Some basic errors and problems have been fixed in the first place. Then started the process of building up functionality on top of the forked project. 
