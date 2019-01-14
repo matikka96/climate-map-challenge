@@ -1,24 +1,38 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 # CGI Climate Map Challenge
 
 This repository is a coding challenge for those who want to show their skills in coding and handling geospatial data.
 
-If you accept the challenge, you should fork this repo and make a pull request when you think you are ready for review.
+Forked from repository: https://github.com/locationsolutions/climate-map-challenge
 
-##  1. Find a bug
+Author: Matvei Tikka
 
-Install dependencies and start the project:
+##  Result
 
-### `npm install`
-### `npm start`
+This is how the end result looks like
+!screenshot()
 
-is there something wrong? fix it.
+## What has been done?
+Some basic errors and problems have been fixed in the first place. Then started the process of building up functionality on top of the forked project. 
 
-## 2. Interactivity
+### Split up on components
+Original project was made of main App.js component and one child component named Sidebar. Project has been split on smaller component with following logic:
+* App.js is the main component, here data is being loaded and passed to child components.
+* Sidebar component. Weather stations are listed here.
+* MapView component. Weather stations are also illustrated visually on the map.
+* Chart component for displaying temperature from selected station. 
 
-Use React-leaflet and fmi-api. Create something interactive.
+All the child components are shown in the "Result" sections screenshot surrounded with individual colors.
 
-## 3. bonus
-- CI-pipeline
-- Data-analysis
+### Data handling
+As mentioned above, App.js component is passing all the information between components. For example if the station is selected from the Sidebar, corresponding stations will be activated in MaView and vice versa. 
+
+When station is selected, Chart component will pop up and weather information will be illustrated there as a line chart. Chart will update automatically if another stations is being selected.
+
+## Installation
+
+Execute following commands:
+
+#### `npm install`
+#### `npm start`
+
+App is now seen from here: http://localhost:3000

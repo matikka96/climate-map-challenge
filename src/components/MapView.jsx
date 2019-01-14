@@ -37,11 +37,7 @@ class MapView extends Component {
         <MapContainer
           center={this.state.position}
           zoom={6}
-          style={
-            this.props.selectedLocationId
-              ? { height: "50vh" }
-              : { height: "100vh" }
-          }
+          style={this.props.selectedLocationId ? { height: "50vh" } : { height: "100vh" }}
         >
           <TileLayer
             url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
@@ -59,9 +55,7 @@ class MapView extends Component {
               <Tooltip
                 direction="right"
                 opacity={1}
-                permanent={
-                  l.info.id === this.props.selectedLocationId ? true : false
-                }
+                permanent={l.info.id === this.props.selectedLocationId ? true : false}
               >
                 <span>{l.info.name}</span>
               </Tooltip>

@@ -46,11 +46,7 @@ class Chart extends Component {
     return (
       <div
         className="Chart"
-        style={
-          this.props.selectedLocationId
-            ? { display: "block" }
-            : { display: "none" }
-        }
+        style={this.props.selectedLocationId ? { display: "block" } : { display: "none" }}
       >
         <button
           type="button"
