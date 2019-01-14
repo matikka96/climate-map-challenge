@@ -6,12 +6,6 @@ Forked from repository: https://github.com/locationsolutions/climate-map-challen
 
 Author: Matvei Tikka
 
-##  Result
-
-This is how the end result looks like:
-![screenshot](https://github.com/matikka96/climate-map-challenge/blob/master/screenshot.png?raw=true)
-Colors represent different components. Read more down below.
-
 ## What has been done?
 Some basic errors and problems have been fixed in the first place. Then started the process of building up functionality on top of the forked project. 
 
@@ -24,11 +18,13 @@ Original project was made of main App.js component and one child component named
 
 **Component structure:**
 
+![screenshot](https://github.com/matikka96/climate-map-challenge/blob/master/screenshot.png?raw=true)
+
 ```
 App.js  
-  |--Sidebar.jsx  
-  |--MapView.jsx  
-  |--Chart.jsx  
+  |--Sidebar.jsx    [PINK]
+  |--MapView.jsx    [RED]
+  |--Chart.jsx      [YELLOW]
 ```
 
 All the child components are shown in the "Result" sections screenshot surrounded with individual colors.
