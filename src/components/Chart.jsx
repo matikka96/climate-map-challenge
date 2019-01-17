@@ -9,17 +9,22 @@ class Chart extends Component {
     chartHeight: 0,
     chartData: []
   };
+  
   componentDidMount() {
+    // Update chart dimensions if screen size changes
     this.getDimensions();
     window.addEventListener("resize", this.getDimensions);
   }
   componentDidUpdate(prevProps, prevState) {
+    // Listen for new station 
     if (prevProps.selectedLocationId !== this.props.selectedLocationId) {
       if (this.props.selectedLocationId) {
         this.parseData();
       }
     }
   }
+
+  // Parsing and saving data in proper format for use in chart
   parseData = () => {
     let selectedData = this.props.observationLocations.filter(
       t => t.info.id === this.props.selectedLocationId
@@ -31,12 +36,16 @@ class Chart extends Component {
     }
     this.setState({ chartData: xyData });
   };
+
+  // Calculates charts width and height based on windos size
   getDimensions = () => {
     this.setState({
       chartWidth: window.innerWidth - 300,
       chartHeight: window.innerHeight / 2
     });
   };
+
+  // Chart rendering
   render() {
     const chartStyle = {
       top: "0",

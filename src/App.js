@@ -15,10 +15,10 @@ L.Icon.Default.mergeOptions({
 });
 
 function App() {
-  const [observationLocations, setObservationLocations] = useState([]);
-
+  const [observationLocations, setObservationLocations] = useState([])
   const [selectedLocation, setSelectedLocation] = useState(null);
 
+  // Get data via API request
   useEffect(function fetchObservationLocations() {
     const connection = new Metolib.WfsConnection();
     if (
@@ -54,10 +54,13 @@ function App() {
     }
   }, []);
 
+  // Update / define ID of selected location
   function handleSelectedLocation(id) {
     console.log("Selected ID: " + id);
     setSelectedLocation(id);
   }
+
+  // Reset ID of selected location
   function handleReset() {
     setSelectedLocation(null);
   }

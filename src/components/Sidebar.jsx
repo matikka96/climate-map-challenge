@@ -2,11 +2,9 @@ import React from "react";
 // import styled from "styled-components";
 // import getSelectedLocatoinId from "../locationGetter";
 
-function Sidebar({
-  selectedLocationId,
-  observationLocations,
-  setSelectedLocation
-}) {
+function Sidebar({ selectedLocationId, observationLocations, setSelectedLocation }) {
+
+  // Sidebar styling
   const sidebarStyle = {
     overflowY: "scroll",
     width: "100%",
@@ -17,8 +15,13 @@ function Sidebar({
     zIndex: "10",
     opacity: "0"
   };
-  return <div style={{width: "300px"}}>
-      <div className="list-group-flush zindex-fixed border-right" style={observationLocations.length == 0 ? { opacity: "0" } : { opacity: "1" }} id="sidebar">
+  return (
+    <div style={{ width: "300px" }}>
+      <div
+        className="list-group-flush zindex-fixed border-right"
+        style={observationLocations.length == 0 ? { opacity: "0" } : { opacity: "1" }}
+        id="sidebar"
+      >
         <div className="list-group-item list-group-item-action active sticky-top">
           <b>Valitse asema:</b>
         </div>
@@ -36,7 +39,8 @@ function Sidebar({
           </div>
         ))}
       </div>
-    </div>;
+    </div>
+  );
 }
 
 export default Sidebar;

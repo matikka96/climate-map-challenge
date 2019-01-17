@@ -8,12 +8,15 @@ class MapView extends Component {
     position: [64, 26]
   };
   componentDidUpdate(prevProps, prevState) {
+    // Listen for new location
     if (prevProps.selectedLocationId !== this.props.selectedLocationId) {
       if (this.props.selectedLocationId) {
         this.getPosition();
       }
     }
   }
+
+  // Update postion if new location selected
   getPosition = () => {
     let selectedData = this.props.observationLocations.filter(
       t => t.info.id === this.props.selectedLocationId
@@ -22,6 +25,8 @@ class MapView extends Component {
       position: [selectedData[0].position.lon, selectedData[0].position.lat]
     });
   };
+
+  // Render amap
   render() {
     const MapContainer = styled(Map)`
       width: calc(100% - ${sidebarWidth});
